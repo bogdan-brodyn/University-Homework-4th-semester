@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+
+\title{Normalization}
+\author{bogdan-brodyn}
+\date{March 13, 2025}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{align}
+&((\lambda a.(\lambda b.b\ b)\ (\lambda b.b\ b))\ b)\ ((\lambda c.(c\ b))\ (\lambda a.a)) \rightarrow_\beta \\
+&(\lambda b.b\ b)\ (\lambda b.b\ b)\ ((\lambda c.(c\ b))\ (\lambda a.a)) \rightarrow_\beta \\
+&(\lambda b.b\ b)\ (\lambda b.b\ b)\ ((\lambda c.(c\ b))\ (\lambda a.a))
+\end{align}
+
+Согласно теореме Карри о нормализации, нормальная стратегия приведёт $\lambda$-терм к нормальной форме, если такая существует. Сокращение самого левого внешнего редекса при переходе от (2) к (3) не оказало эффекта на $\lambda$-терм. Таким образом приходим к выводу, что нормальной формы нет.
+
+\end{document}
