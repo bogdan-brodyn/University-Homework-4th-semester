@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{S K K = I}
+\author{bogdan-brodyn}
+\date{March 13, 2025}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{align}
+&(\lambda x\ y\ z.x\ z\ (y\ z))\ (\lambda x\ y.x)\ (\lambda x\ y.x) \rightarrow_\beta \\
+&(\lambda y\ z.(\lambda x\ y'.x)\ z\ (y\ z))\ (\lambda x\ y.x) \rightarrow_\beta \\
+&(\lambda y\ z.(\lambda y'.z)\ (y\ z))\ (\lambda x\ y.x) \rightarrow_\beta \\
+&(\lambda y\ z.z)\ (\lambda x\ y.x) \rightarrow_\beta \\
+&(\lambda z.z)
+\end{align}
+
+\end{document}
