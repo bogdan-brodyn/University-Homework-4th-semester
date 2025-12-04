@@ -1,0 +1,65 @@
+[
+  {
+    "os": 0,
+    "neighbours": [
+      1,
+      2
+    ],
+    "isInfected": true
+  },
+  {
+    "os": 1,
+    "neighbours": [
+      0,
+      3,
+      4
+    ],
+    "isInfected": true
+  },
+  {
+    "os": 0,
+    "neighbours": [
+      0,
+      4
+    ],
+    "isInfected": false
+  },
+  {
+    "os": 1,
+    "neighbours": [
+      1,
+      4
+    ],
+    "isInfected": false
+  },
+  {
+    "os": 1,
+    "neighbours": [
+      1,
+      2,
+      5
+    ],
+    "isInfected": false
+  },
+  {
+    "os": 1,
+    "neighbours": [
+      3,
+      4,
+      7
+    ],
+    "isInfected": false
+  },
+  {
+    "os": 2,
+    "neighbours": [],
+    "isInfected": false
+  },
+  {
+    "os": 1,
+    "neighbours": [
+      5
+    ],
+    "isInfected": false
+  }
+]
