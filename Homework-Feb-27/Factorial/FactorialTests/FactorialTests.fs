@@ -5,29 +5,14 @@ open NUnit.Framework
 open FsUnit
 
 [<Test>]
-let ``compute should fail on call with a negative parameter!!!`` () =
-    (fun () -> Factorial.compute -1 |> ignore) |> should throw typeof<System.ArgumentException>
+let ``Factorial should return None on call with a negative parameter`` () =
+    Factorial.compute -1 |> should equal None
 
-[<Test>]
-let ``0! should be 1`` () =
-    Factorial.compute 0 |> should equal 1
-
-[<Test>]
-let ``1! should be 1`` () =
-    Factorial.compute 1 |> should equal 1
-
-[<Test>]
-let ``2! should be 2`` () =
-    Factorial.compute 2 |> should equal 2
-
-[<Test>]
-let ``3! should be 6`` () =
-    Factorial.compute 3 |> should equal 6
-
-[<Test>]
-let ``4! should be 24`` () =
-    Factorial.compute 4 |> should equal 24
-
-[<Test>]
-let ``5! should be 120`` () =
-    Factorial.compute 5 |> should equal 120
+[<TestCase(0, 1)>]
+[<TestCase(1, 1)>]
+[<TestCase(2, 2)>]
+[<TestCase(3, 6)>]
+[<TestCase(4, 24)>]
+[<TestCase(5, 120)>]
+let ``Factorial test on small numbers`` (input, expectedResult) =
+    input |> Factorial.compute |> should equal (Some expectedResult)
